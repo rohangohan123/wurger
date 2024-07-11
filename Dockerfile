@@ -1,6 +1,8 @@
 FROM mysterysd/wzmlx:latest
 
-RUN sudo apt install python3 python3-pip
+RUN apt install python3 python3-pip
+
+COPY requirements-cli.txt .
 RUN pip3 install -r requirements-cli.txt
 
 WORKDIR /usr/src/app
